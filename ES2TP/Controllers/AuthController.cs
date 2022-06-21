@@ -41,6 +41,7 @@ namespace ES2TP.Controllers
             {
                 UserSession.UserId = user.Iduser;
                 UserSession.Username = user.Username;
+                UserSession.username = user.Username;
                 return RedirectToAction(controllerName: "Home", actionName: "Index");
             }
 
@@ -50,5 +51,9 @@ namespace ES2TP.Controllers
         }
 
 
+        public IActionResult Registar()
+        {
+            return RedirectToAction(controllerName: "Regist", actionName: "Regist");
+        }
     }
 }

@@ -9,6 +9,8 @@ public static class UserSession
         
     private const string IdUserKey = "IdUser";
     private const string UserNameKey = "Username";
+    public static string username;
+    public static int idutilizador;
 
     public static string Username
     {
