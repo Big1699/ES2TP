@@ -1,0 +1,47 @@
+﻿@model ES2TP.Entities.Ativofinanceiro
+
+@{
+    ViewData["Title"] = "CriarAtivo";
+    var hasError = ViewData["HasError"] as bool? ?? false;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Registar</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CriarAtivo">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Dataini" class="control-label"></label>
+                <input asp-for="Dataini" type="dataini" class="form-control"/>
+                <span asp-validation-for="Dataini" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Duracao" class="control-label"></label>
+                <input asp-for="Duracao" type="duracao" class="form-control"/>
+                <span asp-validation-for="Duracao" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Percentagemimposto" class="control-label"></label>
+                <input asp-for="Percentagemimposto" type="percentagemimposto" class="form-control"/>
+                <span asp-validation-for="Percentagemimposto" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        
+        @if (hasError)
+        {
+            <p style="color: red;">
+                The introduced credentials are invalid
+            </p>
+        }
+    </div>
+</div>

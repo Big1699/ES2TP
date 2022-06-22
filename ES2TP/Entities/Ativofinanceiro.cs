@@ -13,7 +13,7 @@ namespace ES2TP.Entities
         }
 
         public int Idativofinanceiro { get; set; }
-        public DateOnly? Dataini { get; set; }
+        public DateTime Dataini { get; set; }
         public int? Duracao { get; set; }
         public double? Percentagemimposto { get; set; }
         public int? IdUser { get; set; }
