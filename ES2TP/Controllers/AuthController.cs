@@ -42,7 +42,7 @@ namespace ES2TP.Controllers
                 UserSession.UserId = user.Iduser;
                 UserSession.Username = user.Username;
                 UserSession.username = user.Username;
-                return RedirectToAction(controllerName: "Home", actionName: "Index");
+                return RedirectToAction(controllerName: "AtivosMenu", actionName: "MenuAtivos");
             }
 
             ViewData["HasError"] = true;

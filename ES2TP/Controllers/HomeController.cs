@@ -28,4 +28,14 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    public IActionResult Login()
+    {
+        return RedirectToAction(controllerName: "Auth", actionName: "Login");
+    }
+
+    public IActionResult Registo()
+    {
+        return RedirectToAction(controllerName: "Regist", actionName: "Regist");
+    }
 }

@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\es2\TPFInal\ES2TP\ES2TP
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/MenuAtivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXE1lbnVBdGl2b3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

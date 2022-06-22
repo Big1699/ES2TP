@@ -34,7 +34,7 @@ namespace ES2TP.Controllers
             {
                 _context.Add(utilizador);
                 _context.SaveChanges();
-                return RedirectToAction(nameof(Regist));
+                return RedirectToAction(controllerName: "Auth", actionName: "Login");
             }
 
             ViewData["HasError"] = true;
