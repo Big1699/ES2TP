@@ -39,9 +39,7 @@ namespace ES2TP.Controllers
 
             if (user != null)
             {
-                UserSession.UserId = user.Iduser;
-                UserSession.Username = user.Username;
-                UserSession.username = user.Username;
+                UserSession.idutilizador = user.Iduser;
                 return RedirectToAction(controllerName: "Ativos", actionName: "AtivosMenu");
             }
 

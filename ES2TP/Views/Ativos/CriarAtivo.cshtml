@@ -1,5 +1,4 @@
-﻿@model ES2TP.Entities.Ativofinanceiro
-
+﻿@model ES2TP.Models.AtivoFinanceiroModel
 @{
     ViewData["Title"] = "CriarAtivo";
     var hasError = ViewData["HasError"] as bool? ?? false;
@@ -16,7 +15,7 @@
 
             <div class="form-group">
                 <label asp-for="Dataini" class="control-label"></label>
-                <input asp-for="Dataini" type="dataini" class="form-control"/>
+                <input asp-for="Dataini" class="form-control" />
                 <span asp-validation-for="Dataini" class="text-danger"></span>
             </div>
             
@@ -31,7 +30,16 @@
                 <input asp-for="Percentagemimposto" type="percentagemimposto" class="form-control"/>
                 <span asp-validation-for="Percentagemimposto" class="text-danger"></span>
             </div>
-            
+            <p> </p>
+                                            <b></b>
+            <div class="form-group">
+                <p> Escolha o Ativo (1- Imovel, 2- Depositos, 3- Fundos):</p>
+                 <label asp-for="ativoOpcao" class="control-label"></label>
+                <input asp-for="ativoOpcao" type="ativoOpcao" class="form-control"/>
+                <span asp-validation-for="ativoOpcao" class="text-danger"></span>
+            </div>
+              <p> </p>
+                                <b></b>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

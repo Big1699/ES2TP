@@ -10,6 +10,8 @@ namespace ES2TP.Context
     {
         public MyDbContext()
         {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
         }
 
         public MyDbContext(DbContextOptions<MyDbContext> options)
@@ -69,7 +71,9 @@ namespace ES2TP.Context
                 entity.Property(e => e.Dataini).HasColumnName("dataini");
 
                 entity.Property(e => e.Duracao).HasColumnName("duracao");
-
+                
+                entity.Property(e => e.ativoOpcao).HasColumnName("ativoopcao");
+                
                 entity.Property(e => e.IdUser).HasColumnName("idUser");
 
                 entity.Property(e => e.Percentagemimposto).HasColumnName("percentagemimposto");

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ES2TP.Entities
 {
@@ -17,10 +18,13 @@ namespace ES2TP.Entities
         public int? Duracao { get; set; }
         public double? Percentagemimposto { get; set; }
         public int? IdUser { get; set; }
+        
+        public int? ativoOpcao { get; set; }
 
         public virtual Utilizador? IdUserNavigation { get; set; }
         public virtual ICollection<Depositosprazo> Depositosprazos { get; set; }
         public virtual ICollection<Fundosinvestimento> Fundosinvestimentos { get; set; }
         public virtual ICollection<Imovelarrendado> Imovelarrendados { get; set; }
+        
     }
 }

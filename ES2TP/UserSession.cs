@@ -11,6 +11,7 @@ public static class UserSession
     private const string UserNameKey = "Username";
     public static string username;
     public static int idutilizador;
+    public static int idAtivoFinanceiro;
 
     public static string Username
     {

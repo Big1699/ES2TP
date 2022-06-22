@@ -1,0 +1,63 @@
+﻿@model ES2TP.Entities.Imovelarrendado
+
+@{
+    ViewData["Title"] = "CriarImovel";
+    var hasError = ViewData["HasError"] as bool? ?? false;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Registar</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CriarImovel">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Designacao" class="control-label"></label>
+                <input asp-for="Designacao" class="form-control" />
+                <span asp-validation-for="Designacao" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Localizacao" class="control-label"></label>
+                <input asp-for="Localizacao" type="localizacao" class="form-control"/>
+                <span asp-validation-for="Localizacao" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Valorimovel" class="control-label"></label>
+                <input asp-for="Valorimovel" type="valorimovel" class="form-control"/>
+                <span asp-validation-for="Valorimovel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valormensalcondominio" class="control-label"></label>
+                <input asp-for="Valormensalcondominio" type="valorcondominio" class="form-control"/>
+                <span asp-validation-for="Valormensalcondominio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valorrenda" class="control-label"></label>
+                <input asp-for="Valorrenda" type="valorrenda" class="form-control"/>
+                <span asp-validation-for="Valorrenda" class="text-danger"></span>
+            </div>
+               <div class="form-group">
+                   <label asp-for="Valoranual" class="control-label"></label>
+                   <input asp-for="Valoranual" type="valoranual" class="form-control"/>
+                   <span asp-validation-for="Valoranual" class="text-danger"></span>
+               </div>
+              <p> </p>
+                                <b></b>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        
+        @if (hasError)
+        {
+            <p style="color: red;">
+                The introduced credentials are invalid
+            </p>
+        }
+    </div>
+</div>

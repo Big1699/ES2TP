@@ -43,24 +43,36 @@ namespace ES2TP.Controllers
         }
         
         //Criar Ativo
-        
-        
         public IActionResult CriarAtivo()
         {
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CriarAtivo(Ativofinanceiro ativofinanceiro)
+        public async Task<IActionResult> CriarAtivo(Ativofinanceiro ativofinanceiro, AtivoFinanceiroModel ativoFinanceiroModel)
         {
-            var date01 = new DateTime();
-            date01 = ativofinanceiro.Dataini;
-            date01.ToString("yy-MM-dd");
-            
             if (ativofinanceiro.Dataini != null && ativofinanceiro.Duracao != null && ativofinanceiro.Percentagemimposto != null)
             {
+                ativofinanceiro.IdUser = UserSession.idutilizador;
                 _context.Add(ativofinanceiro);
                 _context.SaveChanges();
+
+                if (ativoFinanceiroModel.ativoOpcao == 1)
+                {
+                    return RedirectToAction(controllerName: "Ativos", actionName: "CriarImovel");
+                }
+                
+                if (ativoFinanceiroModel.ativoOpcao == 2)
+                {
+                    return RedirectToAction(controllerName: "Ativos", actionName: "CriarDeposito");
+                }
+                
+                if (ativoFinanceiroModel.ativoOpcao == 3)
+                {
+                    return RedirectToAction(controllerName: "Ativos", actionName: "CriarFundos");
+                }
+                
+                
                 return RedirectToAction(controllerName: "Ativos", actionName: "AtivosMenu");
             }
 
@@ -68,6 +80,79 @@ namespace ES2TP.Controllers
             
             return View("CriarAtivo");
         }
+
+        //Criar Ativo do tipo Imovel
+        public IActionResult CriarImovel()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CriarImovel(Imovelarrendado imovelarrendado)
+        {
+            if (imovelarrendado.Designacao != null && imovelarrendado.Localizacao != null && imovelarrendado.Valorimovel != null && imovelarrendado.Valormensalcondominio != null
+                && imovelarrendado.Valorrenda != null && imovelarrendado.Valoranual != null)
+            {
+                imovelarrendado.IdAtivoFinanceiro = UserSession.idAtivoFinanceiro;
+                _context.Add(imovelarrendado);
+                _context.SaveChanges();
+
+            }
+
+            ViewData["HasError"] = true;
+
+            return View("CriarImovel");
+        }
+
+        
+        //Criar Ativo do tipo Deposito
+        public IActionResult CriarDeposito()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CriarDeposito(Depositosprazo depositosprazo)
+        {
+            if (depositosprazo.Valor != null && depositosprazo.Banco != null && depositosprazo.Numeroconta != null && depositosprazo.Titulares != null
+                && depositosprazo.Taxajurosanual != null)
+            {
+                depositosprazo.IdAtivoFinanceiro = UserSession.idAtivoFinanceiro;
+                _context.Add(depositosprazo);
+                _context.SaveChanges();
+
+            }
+
+            ViewData["HasError"] = true;
+
+            return View("CriarDeposito");
+        }
+
+        
+        //Criar Ativo do tipo Fundos
+        public IActionResult CriarFundos()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CriarFundos(Fundosinvestimento fundosinvestimento)
+        {
+            if (fundosinvestimento.Nome != null && fundosinvestimento.Montanteinvestido != null && fundosinvestimento.Taxajuro != null)
+            {
+                fundosinvestimento.IdAtivoFinanceiro = UserSession.idAtivoFinanceiro;
+                _context.Add(fundosinvestimento);
+                _context.SaveChanges();
+
+            }
+
+            ViewData["HasError"] = true;
+
+            return View("CriarFundos");
+        }
+        
     }
 }
 

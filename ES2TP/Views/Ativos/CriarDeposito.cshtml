@@ -1,0 +1,59 @@
+﻿@model ES2TP.Entities.Depositosprazo
+
+@{
+    ViewData["Title"] = "CriarDeposito";
+    var hasError = ViewData["HasError"] as bool? ?? false;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Registar</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CriarDeposito">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Banco" class="control-label"></label>
+                <input asp-for="Banco" type="banco" class="form-control"/>
+                <span asp-validation-for="Banco" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Numeroconta" class="control-label"></label>
+                <input asp-for="Numeroconta" type="numeroconta" class="form-control"/>
+                <span asp-validation-for="Numeroconta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Titulares" class="control-label"></label>
+                <input asp-for="Titulares" type="titulares" class="form-control"/>
+                <span asp-validation-for="Titulares" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Taxajurosanual" class="control-label"></label>
+                <input asp-for="Taxajurosanual" type="taxajurosanual" class="form-control"/>
+                <span asp-validation-for="Taxajurosanual" class="text-danger"></span>
+            </div>
+               
+              <p> </p>
+            <b></b>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        
+        @if (hasError)
+        {
+            <p style="color: red;">
+                The introduced credentials are invalid
+            </p>
+        }
+    </div>
+</div>

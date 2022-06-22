@@ -27,6 +27,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXENyaWFyQXRpdm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/CriarDeposito.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXENyaWFyRGVwb3NpdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/CriarFundos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXENyaWFyRnVuZG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/CriarImovel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXENyaWFySW1vdmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/EliminarAtivo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEVsaW1pbmFyQXRpdm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
