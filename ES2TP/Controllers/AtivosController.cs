@@ -54,8 +54,11 @@ namespace ES2TP.Controllers
             if (ativofinanceiro.Dataini != null && ativofinanceiro.Duracao != null && ativofinanceiro.Percentagemimposto != null)
             {
                 ativofinanceiro.IdUser = UserSession.idutilizador;
+                
                 _context.Add(ativofinanceiro);
+                
                 _context.SaveChanges();
+                UserSession.idAtivoFinanceiro = ativofinanceiro.Idativofinanceiro;
 
                 if (ativoFinanceiroModel.ativoOpcao == 1)
                 {
@@ -97,6 +100,8 @@ namespace ES2TP.Controllers
                 imovelarrendado.IdAtivoFinanceiro = UserSession.idAtivoFinanceiro;
                 _context.Add(imovelarrendado);
                 _context.SaveChanges();
+                
+                return RedirectToAction(controllerName: "Ativos", actionName: "AtivosMenu");
 
             }
 
@@ -113,12 +118,12 @@ namespace ES2TP.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CriarDeposito(Depositosprazo depositosprazo)
+        public async Task<IActionResult> CriarDeposito(Depositosprazo depositosprazo, Ativofinanceiro ativofinanceiro)
         {
             if (depositosprazo.Valor != null && depositosprazo.Banco != null && depositosprazo.Numeroconta != null && depositosprazo.Titulares != null
                 && depositosprazo.Taxajurosanual != null)
             {
-                depositosprazo.IdAtivoFinanceiro = UserSession.idAtivoFinanceiro;
+                depositosprazo.IdAtivoFinanceiro = ativofinanceiro.Idativofinanceiro;
                 _context.Add(depositosprazo);
                 _context.SaveChanges();
 
@@ -138,11 +143,11 @@ namespace ES2TP.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CriarFundos(Fundosinvestimento fundosinvestimento)
+        public async Task<IActionResult> CriarFundos(Fundosinvestimento fundosinvestimento, Ativofinanceiro ativofinanceiro)
         {
             if (fundosinvestimento.Nome != null && fundosinvestimento.Montanteinvestido != null && fundosinvestimento.Taxajuro != null)
             {
-                fundosinvestimento.IdAtivoFinanceiro = UserSession.idAtivoFinanceiro;
+                fundosinvestimento.IdAtivoFinanceiro = ativofinanceiro.Idativofinanceiro;
                 _context.Add(fundosinvestimento);
                 _context.SaveChanges();
 
