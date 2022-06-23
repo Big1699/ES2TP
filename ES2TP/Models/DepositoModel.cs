@@ -8,11 +8,13 @@ namespace ES2TP.Models
    
         public string Banco { get; set; }
     
-        public int NumeroConta { get; set; }
+        public int Numeroconta { get; set; }
         
         public string Titulares { get; set; }
     
-        public double TaxaJurosAnual { get; set; }
+        public double Taxajurosanual { get; set; }
+        
+        
 
     
     }

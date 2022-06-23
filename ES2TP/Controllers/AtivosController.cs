@@ -31,7 +31,7 @@ namespace ES2TP.Controllers
         {
             return RedirectToAction(controllerName: "Ativos", actionName: "CriarAtivo");
         }
-
+        
         public IActionResult Editar()
         {
             throw new NotImplementedException();
@@ -101,7 +101,7 @@ namespace ES2TP.Controllers
                 _context.Add(imovelarrendado);
                 _context.SaveChanges();
                 
-                return RedirectToAction(controllerName: "Ativos", actionName: "AtivosMenu");
+                return RedirectToAction(controllerName: "Ativos", actionName: "RecebeDadosImovel");
 
             }
 
@@ -126,6 +126,8 @@ namespace ES2TP.Controllers
                 depositosprazo.IdAtivoFinanceiro = UserSession.idAtivoFinanceiro;
                 _context.Add(depositosprazo);
                 _context.SaveChanges();
+                
+                return RedirectToAction(controllerName: "Ativos", actionName: "RecebeDadosDeposito");
 
             }
 
@@ -150,6 +152,8 @@ namespace ES2TP.Controllers
                 fundosinvestimento.IdAtivoFinanceiro = UserSession.idAtivoFinanceiro;
                 _context.Add(fundosinvestimento);
                 _context.SaveChanges();
+                
+                return RedirectToAction(controllerName: "Ativos", actionName: "RecebeDadosFundos");
 
             }
 
@@ -159,15 +163,70 @@ namespace ES2TP.Controllers
         }
         
         
+        //Mostrar Dados Imovel
         
         public IActionResult RecebeDadosImovel()
         {
-            return View();
+            var db = new MyDbContext();
+
+            var imo = db.Imovelarrendados;
+            return View(imo.Select(m => new ImovelMostrarModel(m)).ToList());
         }
         
         
+        //Mostrar Dados Depositos
+        
+        public IActionResult RecebeDadosDeposito()
+        {
+            var db = new MyDbContext();
+
+            var depo = db.Depositosprazos;
+            return View(depo.Select(m => new DepositosMostarModel(m)).ToList()); }
+        
+        //Mostrar Dados Fundos
         
         
+        public IActionResult RecebeDadosFundos()
+        {
+            var db = new MyDbContext();
+
+            var fund = db.Fundosinvestimentos;
+            return View(fund.Select(m => new FundosMostarModel(m)).ToList()); }
+        
+        //Mostrar Dados Ativos
+        
+        
+        public IActionResult RecebeDadosAtivos()
+        {
+            var db = new MyDbContext();
+
+            var ativ = db.Ativofinanceiros;
+            return View(ativ.Select(m => new AtivosMostrarModel(m)).ToList()); }
+        
+        
+
+        
+        //Listar Ativos, Imoveis, Depositos e Fundos para poder pesquisar
+        public IActionResult ListarAtivos()
+        {
+            return RedirectToAction(controllerName: "Ativos", actionName: "RecebeDadosAtivos");
+        }
+
+        public IActionResult ListarImoveis()
+        {
+            return RedirectToAction(controllerName: "Ativos", actionName: "RecebeDadosImovel");
+        }
+
+        public IActionResult ListarDepositos()
+        {
+            return RedirectToAction(controllerName: "Ativos", actionName: "RecebeDadosDeposito");
+        }
+
+        public IActionResult ListarFundos()
+        {
+            return RedirectToAction(controllerName: "Ativos", actionName: "RecebeDadosFundos");
+        }
     }
+    
 }
 

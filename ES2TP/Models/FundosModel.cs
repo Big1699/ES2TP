@@ -5,9 +5,9 @@
     
         public string Nome  { get; set; }
    
-        public double Montante { get; set; }
+        public double Montanteinvestido { get; set; }
 
-        public double TaxaJuro { get; set; }
+        public double Taxajuro { get; set; }
     
     }
     

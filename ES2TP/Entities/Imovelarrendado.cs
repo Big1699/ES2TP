@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ES2TP.Models;
 
 namespace ES2TP.Entities
 {
@@ -15,5 +16,7 @@ namespace ES2TP.Entities
         public int? IdAtivoFinanceiro { get; set; }
 
         public virtual Ativofinanceiro? IdAtivoFinanceiroNavigation { get; set; }
+
+        
     }
 }

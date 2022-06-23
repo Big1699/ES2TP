@@ -1,18 +1,40 @@
-﻿@model TModel
+﻿@model List<DepositosMostarModel>
+
 
 @{
-    Layout = null;
+    ViewData["Title"] = "MostarDepo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+
+<title>DadosDepositos</title>
+
+<head>Listar Depositos</head>
+
+@Html.TextBox("searching")<input type="submit" value = "Search"/>
+ <p> </p>
+<b></b>
+<table style="width: 100%">
+    <tr>
+        <th>Valor</th>
+        <th>Banco</th>
+        <th>NumeroConta</th>
+        <th>Titulares</th>
+        <th>TaxaJurosAnual</th>
+        <th>idAtivoFinanceiro</th>
+    </tr>
+      @foreach (var depo in @Model)
+      {
+          <tr>
+              <td>@depo.Valor</td>
+              <td>@depo.Banco</td>
+              <td>@depo.NumeroConta</td>
+              <td>@depo.Titulares</td>
+              <td>@depo.TaxaJurosAnual</td>
+              <td>@depo.idAtivoFinanceiro</td>
+          </tr>
+      }
+</table>
+ 

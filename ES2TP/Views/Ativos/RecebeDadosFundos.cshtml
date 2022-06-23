@@ -1,18 +1,36 @@
-﻿@model TModel
+﻿@model List<FundosMostarModel>
+
 
 @{
-    Layout = null;
+    ViewData["Title"] = "MostarFundo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+
+<title>DadosFundos</title>
+<head>Listar Fundos</head>
+
+@Html.TextBox("searching")<input type="submit" value = "Search"/>
+ <p> </p>
+<b></b>
+
+<table style="width: 100%">
+    <tr>
+        <th>Nome</th>
+        <th>MontanteInvestido</th>
+        <th>Taxajuro</th>
+        <th>idAtivoFinanceiro</th>
+    </tr>
+      @foreach (var fund in @Model)
+      {
+          <tr>
+              <td>@fund.Nome</td>
+              <td>@fund.MontanteInvestido</td>
+              <td>@fund.TaxaJuro</td>
+              <td>@fund.idAtivoFinanceiro</td>
+          </tr>
+      }
+</table>
+ 

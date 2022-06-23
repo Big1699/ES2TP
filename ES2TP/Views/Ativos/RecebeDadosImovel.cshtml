@@ -1,30 +1,43 @@
-﻿
+﻿@model List<ImovelMostrarModel>
+
+
 @{
-    Layout = null;
+    ViewData["Title"] = "MostarImovel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
 
 
 <title>DadosImovel</title>
-<tr>
-          <th>Designacao</th>
-          <th>Localizacao</th>
-          <th>ValorImovel</th>
-          <th>ValorMensalCond</th>
-          <th>ValorRenda</th>
-          <th>ValorAnual</th>
-          <th>idAtivoFinanceiro</th>
-</tr>
+
+<head>Listar Imoveis</head>
+
+@Html.TextBox("searching")<input type="submit" value = "Search"/>
+ <p> </p>
+<b></b>
+
+<table style="width: 100%">
+    <tr>
+        <th>Designacao</th>
+        <th>Localizacao</th>
+        <th>ValorImovel</th>
+        <th>ValorMensalCond</th>
+        <th>ValorRenda</th>
+        <th>ValorAnual</th>
+        <th>idAtivoFinanceiro</th>
+    </tr>
       @foreach (var imo in @Model)
       {
           <tr>
-              //<td>@imo.//Designacao</td>
-              // <td>@imo.//Localizacao</td>
-              //<td>@imo.//ValorImovel</td>
-              //<td>@imo.//ValorMensalCond</td>
-              <td>@imo.//ValorRenda</td>
-              <td>@imo.//ValorAnual</td>
-              <td>@imo.//idAtivoFinanceiro</td>
+              <td>@imo.Designacao</td>
+              <td>@imo.Localizacao</td>
+              <td>@imo.ValorImovel</td>
+              <td>@imo.ValorMensalCond</td>
+              <td>@imo.ValorRenda</td>
+              <td>@imo.ValorAnual</td>
+              <td>@imo.idAtivoFinanceiro</td>
           </tr>
       }
+</table>
+ 

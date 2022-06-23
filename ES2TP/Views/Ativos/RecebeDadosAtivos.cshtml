@@ -1,0 +1,37 @@
+﻿@model List<AtivosMostrarModel>
+
+
+@{
+    ViewData["Title"] = "MostarFundo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+
+<title>DadosAtivoFinanceiro</title>
+
+<head>Listar Ativos</head>
+
+
+
+@Html.TextBox("searching")<input type="submit" value = "Search"/>
+ <p> </p>
+<b></b>
+<table style="width: 100%">
+    <tr>
+        <th>Dataini</th>
+        <th>Duracao</th>
+        <th>Percentagemimposto</th>
+        <th>AtivoOpcao</th>
+    </tr>
+    @foreach (var ativ in @Model)
+    {
+        <tr>
+            <td>@ativ.Dataini</td>
+            <td>@ativ.Duracao</td>
+            <td>@ativ.Percentagemimposto</td>
+            <td>@ativ.ativoOpcao</td>
+        </tr>
+    }
+</table>
