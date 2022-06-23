@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\es2\TPFInal\ES2TP\ES2TP
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/es2/TPFInal/ES2TP/ES2TP/Pages/RegistAdmin/RegistAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0QWRtaW5cUmVnaXN0QWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Admin/AdminMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5NZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/AlterarAtivo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEFsdGVyYXJBdGl2by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -69,6 +77,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/RegistAdmin/RegistAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0QWRtaW5cUmVnaXN0QWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Regist/Regist.cshtml]

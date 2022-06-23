@@ -7,17 +7,17 @@ using ES2TP.Context;
 
 namespace ES2TP.Controllers
 {
-    public class RegistController : Controller
+    public class RegistAdminController : Controller
     {
 
         private readonly MyDbContext _context;
 
-        public RegistController()
+        public RegistAdminController()
         {
             _context = new MyDbContext();
         }
 
-        public IActionResult Regist()
+        public IActionResult RegistAdmin()
         {
             return View();
         }
@@ -28,22 +28,21 @@ namespace ES2TP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Utilizador utilizador)
+        public async Task<IActionResult> CreateAdmin(Administrador administrador)
         {
-            if (utilizador.Email != null && utilizador.Username != null && utilizador.Password != null)
+            if (administrador.Email != null && administrador.Username != null && administrador.Password != null)
             {
-                _context.Add(utilizador);
+                _context.Add(administrador);
                 _context.SaveChanges();
                 return RedirectToAction(controllerName: "Auth", actionName: "Login");
             }
 
             ViewData["HasError"] = true;
             
-            return View("Regist");
+            return View("RegistAdmin");
         }
-        
 
+        
     }
 
 }
-

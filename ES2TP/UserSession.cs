@@ -12,6 +12,7 @@ public static class UserSession
     public static string username;
     public static int idutilizador;
     public static int idAtivoFinanceiro;
+    public static int idadmin;
 
     public static string Username
     {

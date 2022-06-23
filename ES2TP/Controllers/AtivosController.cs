@@ -176,12 +176,13 @@ namespace ES2TP.Controllers
         
         //Mostrar Dados Depositos
         
-        public IActionResult RecebeDadosDeposito()
+        public IActionResult RecebeDadosDeposito(string searching)
         {
             var db = new MyDbContext();
 
             var depo = db.Depositosprazos;
-            return View(depo.Select(m => new DepositosMostarModel(m)).ToList()); }
+            return View(depo.Select(m => new DepositosMostarModel(m)).ToList());
+        }
         
         //Mostrar Dados Fundos
         

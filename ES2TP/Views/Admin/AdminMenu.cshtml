@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "MenuAdmin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Menu</title>
+</head>
+<body>
+<div>
+    <p> </p>
+    <b></b>
+    <form asp-action="CriarAdmin">
+        <div class="form-group">
+            <input type="submit" value="Criar Admin" class="btn btn-primary" />
+        </div>
+    </form>
+    <p> </p>
+    <b></b>
+    <form asp-action="CriarUtilizador">
+        <div class="form-group">
+            <input type="submit" value="Criar Utilizador" class="btn btn-primary" />
+        </div>
+    </form>
+    <p> </p>
+    <b></b>
+    <form asp-action="ListarAtivos">
+        <div class="form-group">
+            <input type="submit" value="Listar Ativos Financieiros" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <p> </p>
+    <b></b>
+    <form asp-action="ListarImoveis">
+        <div class="form-group">
+            <input type="submit" value="Listar Imoveis" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <p> </p>
+    <b></b>
+    <form asp-action="ListarDepositos">
+        <div class="form-group">
+            <input type="submit" value="Listar Depositos a Prazo" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <p> </p>
+    <b></b>
+    <form asp-action="ListarFundos">
+        <div class="form-group">
+            <input type="submit" value="Listar Fundos" class="btn btn-primary" />
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

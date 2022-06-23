@@ -37,10 +37,26 @@ namespace ES2TP.Controllers
             var user = _context.Utilizadors
                 .FirstOrDefault(u => u.Email.Equals(login.Email) && u.Password.Equals(login.Password));
 
+            
+
             if (user != null)
             {
                 UserSession.idutilizador = user.Iduser;
                 return RedirectToAction(controllerName: "Ativos", actionName: "AtivosMenu");
+            }
+            
+            var admin = _context.Administradors.FirstOrDefault(a => a.Email.Equals(login.Email) && a.Password.Equals(login.Password));
+
+            if (admin != null)
+            {
+                UserSession.idadmin = admin.Idadmin;
+                return RedirectToAction(controllerName: "Admin", actionName: "AdminMenu");
+            }
+
+            if (login.Email.Equals("AdminMaster@gmail.com") &&
+                login.Password.Equals("AdminMaster"))
+            {
+                return RedirectToAction(controllerName: "Admin", actionName: "AdminMenu");
             }
 
             ViewData["HasError"] = true;
