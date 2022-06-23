@@ -1,0 +1,31 @@
+﻿@model ImovelModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<title>DadosImovel</title>
+<tr>
+          <th>Designacao</th>
+          <th>Localizacao</th>
+          <th>ValorImovel</th>
+          <th>ValorMensalCond</th>
+          <th>ValorRenda</th>
+          <th>ValorAnual</th>
+          <th>idAtivoFinanceiro</th>
+</tr>
+      @foreach (var imo in @Model)
+      {
+          <tr>
+              //<td>@imo.//Designacao</td>
+              // <td>@imo.//Localizacao</td>
+              //<td>@imo.//ValorImovel</td>
+              //<td>@imo.//ValorMensalCond</td>
+              <td>@imo.//ValorRenda</td>
+              <td>@imo.//ValorAnual</td>
+              <td>@imo.//idAtivoFinanceiro</td>
+          </tr>
+      }

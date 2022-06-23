@@ -43,6 +43,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEVsaW1pbmFyQXRpdm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/RecebeDadosDeposito.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXFJlY2ViZURhZG9zRGVwb3NpdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/RecebeDadosFundos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXFJlY2ViZURhZG9zRnVuZG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/RecebeDadosImovel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXFJlY2ViZURhZG9zSW1vdmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

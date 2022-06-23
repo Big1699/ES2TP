@@ -118,12 +118,12 @@ namespace ES2TP.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CriarDeposito(Depositosprazo depositosprazo, Ativofinanceiro ativofinanceiro)
+        public async Task<IActionResult> CriarDeposito(Depositosprazo depositosprazo)
         {
             if (depositosprazo.Valor != null && depositosprazo.Banco != null && depositosprazo.Numeroconta != null && depositosprazo.Titulares != null
                 && depositosprazo.Taxajurosanual != null)
             {
-                depositosprazo.IdAtivoFinanceiro = ativofinanceiro.Idativofinanceiro;
+                depositosprazo.IdAtivoFinanceiro = UserSession.idAtivoFinanceiro;
                 _context.Add(depositosprazo);
                 _context.SaveChanges();
 
@@ -143,11 +143,11 @@ namespace ES2TP.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CriarFundos(Fundosinvestimento fundosinvestimento, Ativofinanceiro ativofinanceiro)
+        public async Task<IActionResult> CriarFundos(Fundosinvestimento fundosinvestimento)
         {
             if (fundosinvestimento.Nome != null && fundosinvestimento.Montanteinvestido != null && fundosinvestimento.Taxajuro != null)
             {
-                fundosinvestimento.IdAtivoFinanceiro = ativofinanceiro.Idativofinanceiro;
+                fundosinvestimento.IdAtivoFinanceiro = UserSession.idAtivoFinanceiro;
                 _context.Add(fundosinvestimento);
                 _context.SaveChanges();
 
@@ -157,6 +157,16 @@ namespace ES2TP.Controllers
 
             return View("CriarFundos");
         }
+        
+        
+        
+        public IActionResult RecebeDadosImovel()
+        {
+            return View();
+        }
+        
+        
+        
         
     }
 }

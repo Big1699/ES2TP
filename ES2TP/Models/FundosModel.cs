@@ -6,8 +6,6 @@
         public string Nome  { get; set; }
    
         public double Montante { get; set; }
-    
-        public double taxa { get; set; }
 
         public double TaxaJuro { get; set; }
     

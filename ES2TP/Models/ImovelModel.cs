@@ -1,6 +1,8 @@
-﻿namespace ES2TP.Models
+﻿using System.Collections;
+
+namespace ES2TP.Models
 {
-    public class ImovelModel
+    public class ImovelModel : IEnumerable
     {
         public string Designacao  { get; set; }
    
@@ -13,6 +15,10 @@
         public double ValorRenda { get; set; }
         
         public double ValorAnual { get; set; }
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
     
 }
