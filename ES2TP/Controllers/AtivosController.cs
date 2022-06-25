@@ -510,7 +510,8 @@ namespace ES2TP.Controllers
                 ImovelMostrarModel aim = new ImovelMostrarModel(imovelarrendado);
                 return View(aim);
             }
-            return RedirectToAction(controllerName: "Ativos", actionName: "RecebeDadosImovel");
+            
+            return RedirectToAction("RecebeDadosImovel", "Ativos");
         }
         
         [HttpPost]
