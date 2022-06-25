@@ -1,0 +1,54 @@
+﻿@model ES2TP.Models.AtivosMostrarModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var errors = ViewData["Errors"] as List<string> ?? new List<string>();
+}
+
+<h1>EditarAtivos</h1>
+
+<h4>Ativos Financeiros</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditarAtivo" method="Post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idAtivoFinanceiro" />
+            <div class="form-group">
+                <label asp-for="Dataini" class="control-label"></label>
+                <input asp-for="Dataini" class="form-control" />
+                <span asp-validation-for="Dataini" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duracao" class="control-label"></label>
+                <input asp-for="Duracao" class="form-control" />
+                <span asp-validation-for="Duracao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Percentagemimposto" class="control-label"></label>
+                <input asp-for="Percentagemimposto" class="form-control" />
+                <span asp-validation-for="Percentagemimposto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ativoOpcao" class="control-label"></label>
+                <input asp-for="ativoOpcao" class="form-control" />
+                <span asp-validation-for="ativoOpcao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+            <div style="color: red;">
+                @foreach (var error in errors)
+                {
+                    <p>@error</p>
+                }
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="RecebeDadosAtivos">Back to List</a>
+</div>

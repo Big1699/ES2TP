@@ -14,6 +14,8 @@ namespace ES2TP.Entities
         public string? Email { get; set; }
         public string Username { get; set; }
         public string? Password { get; set; }
+        
+        public int? tipoUser { get; set; }
 
         public virtual ICollection<Ativofinanceiro> Ativofinanceiros { get; set; }
     }

@@ -41,9 +41,21 @@ namespace ES2TP.Controllers
 
             if (user != null)
             {
-                UserSession.idutilizador = user.Iduser;
-                return RedirectToAction(controllerName: "Ativos", actionName: "AtivosMenu");
+                if (user.tipoUser == 1)
+                {
+                    UserSession.idutilizador = user.Iduser;
+                    return RedirectToAction(controllerName: "Ativos", actionName: "AtivosMenu");   
+                }
+
+                if (user.tipoUser == 2)
+                {
+                    UserSession.idutilizador = user.Iduser;
+                    return RedirectToAction(controllerName: "UserManager", actionName: "UserManagerMenu");      
+                }
+                
+                
             }
+            
             
             var admin = _context.Administradors.FirstOrDefault(a => a.Email.Equals(login.Email) && a.Password.Equals(login.Password));
 

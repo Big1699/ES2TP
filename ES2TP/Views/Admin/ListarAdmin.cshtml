@@ -1,0 +1,46 @@
+﻿@model List<AdminMostrarModel>
+
+
+@{
+    ViewData["Title"] = "MostarUsers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+
+<title>DadosAdmins</title>
+
+<head>Listar Admins</head>
+
+<p> </p>
+<b></b>
+<table style="width: 100%" id="tabela">
+    
+    <thead>
+    <tr>
+        <th>idAdmin</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var admin in @Model)
+    {
+        <tr>
+            <td>@admin.idAdmin</td>
+            <td>@admin.Email</td>
+            <td>@admin.Username</td>
+            <td>@admin.Password</td>
+
+            <td>
+                <a asp-action="EditarAdmin" asp-route-id="@admin.idAdmin">Editar</a> |
+                <a asp-action="EliminarAdmin" asp-route-id="@admin.idAdmin">Eliminar</a>
+            </td>
+
+        </tr>
+    }
+    </tbody>
+</table>

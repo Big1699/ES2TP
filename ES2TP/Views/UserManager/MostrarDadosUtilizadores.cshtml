@@ -1,0 +1,50 @@
+﻿@model List<UsersMostrarModel>
+
+
+@{
+    ViewData["Title"] = "MostarUsers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+
+<title>DadosUsers</title>
+
+<head>Listar Users</head>
+
+
+
+
+<p> </p>
+<b></b>
+<table style="width: 100%" id="tabela">
+    <thead>
+    <tr>
+        <th>idUser</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>TipoUser</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in @Model)
+    {
+        <tr>
+            <td>@user.idUSer</td>
+            <td>@user.Email</td>
+            <td>@user.Username</td>
+            <td>@user.Password</td>
+            <td>@user.tipoUser</td>
+
+            <td>
+                <a asp-action="EditarUtilizador" asp-route-id="@user.idUSer">Editar</a> |
+                <a asp-action="EliminarUser" asp-route-id="@user.idUSer">Eliminar</a>
+            </td>
+
+        </tr>
+    }
+    </tbody>
+</table>

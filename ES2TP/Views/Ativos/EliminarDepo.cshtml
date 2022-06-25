@@ -1,0 +1,37 @@
+﻿@model ES2TP.Entities.Depositosprazo?
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Apagar</h1>
+
+<h3>Tem a certeza que quer eliminar?</h3>
+<div>
+    <h4>Depositos a Prazo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Banco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Titulares)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Taxajurosanual)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Numeroconta)
+        </dd>
+    </dl>
+    
+    <form asp-action="EliminarDepo">
+        <input type="hidden" asp-for="Iddepositos" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="RecebeDadosDeposito">Voltar</a>
+    </form>
+</div>

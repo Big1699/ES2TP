@@ -13,10 +13,10 @@
 
 <head>Listar Depositos</head>
 
-@Html.TextBox("searching")<input type="submit" value = "Search"/>
  <p> </p>
 <b></b>
-<table style="width: 100%">
+<table style="width: 100%" id="tabela">
+    <thead>
     <tr>
         <th>Valor</th>
         <th>Banco</th>
@@ -24,17 +24,26 @@
         <th>Titulares</th>
         <th>TaxaJurosAnual</th>
         <th>idAtivoFinanceiro</th>
+        <th></th>
     </tr>
-      @foreach (var depo in @Model)
-      {
-          <tr>
-              <td>@depo.Valor</td>
-              <td>@depo.Banco</td>
-              <td>@depo.NumeroConta</td>
-              <td>@depo.Titulares</td>
-              <td>@depo.TaxaJurosAnual</td>
-              <td>@depo.idAtivoFinanceiro</td>
-          </tr>
-      }
+    </thead>
+    <tbody>
+    @foreach (var depo in @Model)
+    {
+        <tr>
+            <td>@depo.Valor</td>
+            <td>@depo.Banco</td>
+            <td>@depo.NumeroConta</td>
+            <td>@depo.Titulares</td>
+            <td>@depo.TaxaJurosAnual</td>
+            <td>@depo.idAtivoFinanceiro</td>
+
+            <td>
+                <a asp-action="EditarDeposito" asp-route-id="@depo.IdDepo">Editar</a>
+                <a asp-action="EliminarDepo" asp-route-id="@depo.IdDepo">Eliminar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
 </table>
  

@@ -15,16 +15,19 @@
 
 
 
-@Html.TextBox("searching")<input type="submit" value = "Search"/>
  <p> </p>
 <b></b>
-<table style="width: 100%">
+<table style="width: 100%" id="tabela">
+    <thead>
     <tr>
         <th>Dataini</th>
         <th>Duracao</th>
         <th>Percentagemimposto</th>
         <th>AtivoOpcao</th>
+        <th></th>
     </tr>
+    </thead>
+    <tbody>
     @foreach (var ativ in @Model)
     {
         <tr>
@@ -32,6 +35,13 @@
             <td>@ativ.Duracao</td>
             <td>@ativ.Percentagemimposto</td>
             <td>@ativ.ativoOpcao</td>
+
+            <td>
+                <a asp-action="EditarAtivo" asp-route-id="@ativ.idAtivoFinanceiro">Editar</a> |
+                <a asp-action="EliminarAtivo" asp-route-id="@ativ.idAtivoFinanceiro">Eliminar</a>
+            </td>
+
         </tr>
     }
+    </tbody>
 </table>

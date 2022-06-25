@@ -36,6 +36,6 @@ public class HomeController : Controller
 
     public IActionResult Registo()
     {
-        return RedirectToAction(controllerName: "Regist", actionName: "Regist");
+        return RedirectToAction(controllerName: "RegistUser1", actionName: "RegistUser");
     }
 }

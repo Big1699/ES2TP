@@ -17,7 +17,8 @@
  <p> </p>
 <b></b>
 
-<table style="width: 100%">
+<table style="width: 100%" id="tabela">
+    <thead>
     <tr>
         <th>Designacao</th>
         <th>Localizacao</th>
@@ -26,18 +27,27 @@
         <th>ValorRenda</th>
         <th>ValorAnual</th>
         <th>idAtivoFinanceiro</th>
+        <th></th>
     </tr>
-      @foreach (var imo in @Model)
-      {
-          <tr>
-              <td>@imo.Designacao</td>
-              <td>@imo.Localizacao</td>
-              <td>@imo.ValorImovel</td>
-              <td>@imo.ValorMensalCond</td>
-              <td>@imo.ValorRenda</td>
-              <td>@imo.ValorAnual</td>
-              <td>@imo.idAtivoFinanceiro</td>
-          </tr>
-      }
+    </thead>
+    <tbody>
+    @foreach (var imo in @Model)
+    {
+        <tr>
+            <td>@imo.Designacao</td>
+            <td>@imo.Localizacao</td>
+            <td>@imo.ValorImovel</td>
+            <td>@imo.ValorMensalCond</td>
+            <td>@imo.ValorRenda</td>
+            <td>@imo.ValorAnual</td>
+            <td>@imo.idAtivoFinanceiro</td>
+
+            <td>
+                <a asp-action="EditarImovel" asp-route-id="@imo.idImovel">Editar</a> |
+                <a asp-action="EliminarImovel" asp-route-id="@imo.idImovel">Eliminar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
 </table>
  

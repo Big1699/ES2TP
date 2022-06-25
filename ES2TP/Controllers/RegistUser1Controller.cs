@@ -7,31 +7,30 @@ using ES2TP.Context;
 
 namespace ES2TP.Controllers
 {
-    public class RegistController : Controller
+    public class RegistUser1Controller : Controller
     {
 
         private readonly MyDbContext _context;
 
-        public RegistController()
+        public RegistUser1Controller()
         {
             _context = new MyDbContext();
         }
 
-        public IActionResult Regist()
+        public IActionResult RegistUser()
         {
             return View();
         }
 
 
-        // POST: Meal/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Utilizador utilizador)
         {
             if (utilizador.Email != null && utilizador.Username != null && utilizador.Password != null)
             {
+                utilizador.tipoUser = 1;
                 _context.Add(utilizador);
                 _context.SaveChanges();
                 return RedirectToAction(controllerName: "Auth", actionName: "Login");
@@ -39,11 +38,10 @@ namespace ES2TP.Controllers
 
             ViewData["HasError"] = true;
             
-            return View("Regist");
+            return View("RegistUser");
         }
 
         
     }
 
 }
-

@@ -1,0 +1,46 @@
+﻿@model ES2TP.Entities.Utilizador
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Apagar</h1>
+
+<h3>Tem a certeza que quer eliminar?</h3>
+<div>
+    <h4>Admins</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+           <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.tipoUser)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.tipoUser)
+                </dd>
+    </dl>
+    
+    <form asp-action="EliminarUser">
+        <input type="hidden" asp-for="Iduser" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="ListarUsers">Voltar</a>
+    </form>
+</div>

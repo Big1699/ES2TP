@@ -1,18 +1,34 @@
-﻿
+﻿@model ES2TP.Entities.Ativofinanceiro
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+<h1>Apagar</h1>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
+<h3>Tem a certeza que quer eliminar?</h3>
 <div>
-      
+    <h4>Ativos Financeiros</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ativoOpcao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dataini)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Duracao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Percentagemimposto)
+        </dd>
+    </dl>
+    
+    <form asp-action="EliminarAtivo">
+        <input type="hidden" asp-for="Idativofinanceiro" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="RecebeDadosAtivos">Voltar</a>
+    </form>
 </div>
-</body>
-</html>

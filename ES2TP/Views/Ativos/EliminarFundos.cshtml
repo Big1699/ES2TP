@@ -1,0 +1,31 @@
+﻿@model ES2TP.Entities.Fundosinvestimento?
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Apagar</h1>
+
+<h3>Tem a certeza que quer eliminar?</h3>
+<div>
+    <h4>Fundos de Investimento</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Montanteinvestido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Taxajuro)
+        </dt>
+    </dl>
+    
+    <form asp-action="EliminarFundos">
+        <input type="hidden" asp-for="Idfundos" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="RecebeDadosFundos">Voltar</a>
+    </form>
+</div>

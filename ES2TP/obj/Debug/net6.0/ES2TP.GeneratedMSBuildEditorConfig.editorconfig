@@ -23,8 +23,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5NZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/AlterarAtivo.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEFsdGVyYXJBdGl2by5jc2h0bWw=
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Admin/AlterarPermissao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWx0ZXJhclBlcm1pc3Nhby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Admin/EditarAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdGFyQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Admin/EditarUtilizador.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdGFyVXRpbGl6YWRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Admin/EliminarAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWxpbWluYXJBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Admin/EliminarUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWxpbWluYXJVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Admin/ListarAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdGFyQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/AtivosMenu.cshtml]
@@ -47,8 +67,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXENyaWFySW1vdmVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/EditarAtivo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEVkaXRhckF0aXZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/EditarDeposito.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEVkaXRhckRlcG9zaXRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/EditarFundos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEVkaXRhckZ1bmRvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/EditarImovel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEVkaXRhckltb3ZlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/EliminarAtivo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEVsaW1pbmFyQXRpdm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/EliminarDepo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEVsaW1pbmFyRGVwby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/EliminarFundos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEVsaW1pbmFyRnVuZG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/EliminarImovel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRpdm9zXEVsaW1pbmFySW1vdmVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Ativos/RecebeDadosAtivos.cshtml]
@@ -83,6 +131,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0QWRtaW5cUmVnaXN0QWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/RegistUser1/RegistUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0VXNlcjFcUmVnaXN0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Regist/Regist.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0XFJlZ2lzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -93,6 +145,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/UserManager/EditarUtilizador.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZXJcRWRpdGFyVXRpbGl6YWRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/UserManager/EliminarUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZXJcRWxpbWluYXJVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/UserManager/MostrarDadosUtilizadores.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZXJcTW9zdHJhckRhZG9zVXRpbGl6YWRvcmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/es2/TPFInal/ES2TP/ES2TP/Views/UserManager/UserManagerMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZXJcVXNlck1hbmFnZXJNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/es2/TPFInal/ES2TP/ES2TP/Views/_ViewImports.cshtml]

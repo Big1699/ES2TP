@@ -6,6 +6,8 @@ namespace ES2TP.Models
     
     public class AtivosMostrarModel
     {
+        
+
 
         public AtivosMostrarModel(Ativofinanceiro ativofinanceiro)
         {
@@ -13,7 +15,13 @@ namespace ES2TP.Models
             this.Duracao = ativofinanceiro.Duracao;
             this.Percentagemimposto = ativofinanceiro.Percentagemimposto;
             this.ativoOpcao = ativofinanceiro.ativoOpcao;
+            this.idUSer = ativofinanceiro.IdUser;
+            this.idAtivoFinanceiro = ativofinanceiro.Idativofinanceiro;
         }
+        
+        public int? idAtivoFinanceiro { get; set; }
+        
+        public int? idUSer { get; set; }
     
         public int? ativoOpcao { get; set; }
 

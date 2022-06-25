@@ -181,6 +181,8 @@ namespace ES2TP.Context
                 entity.ToTable("utilizador");
 
                 entity.Property(e => e.Iduser).HasColumnName("iduser");
+                
+                entity.Property(e => e.tipoUser).HasColumnName("tipouser");
 
                 entity.Property(e => e.Email)
                     .HasMaxLength(100)

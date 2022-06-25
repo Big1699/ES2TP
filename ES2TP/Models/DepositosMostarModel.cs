@@ -15,8 +15,10 @@ namespace ES2TP.Models
             this.Valor = depositosprazo.Valor;
             this.Titulares = depositosprazo.Titulares;
             this.idAtivoFinanceiro = depositosprazo.IdAtivoFinanceiro;
+            this.IdDepo = depositosprazo.Iddepositos;
         }
 
+        public int IdDepo { get; set; }
         public string? Titulares { get; set; }
 
         public int? Valor { get; set; }

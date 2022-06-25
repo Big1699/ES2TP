@@ -12,25 +12,34 @@
 <title>DadosFundos</title>
 <head>Listar Fundos</head>
 
-@Html.TextBox("searching")<input type="submit" value = "Search"/>
- <p> </p>
-<b></b>
 
-<table style="width: 100%">
+
+<table style="width: 100%" id="tabela">
+    <thead>
     <tr>
         <th>Nome</th>
         <th>MontanteInvestido</th>
         <th>Taxajuro</th>
         <th>idAtivoFinanceiro</th>
+        <th></th>
     </tr>
-      @foreach (var fund in @Model)
-      {
-          <tr>
-              <td>@fund.Nome</td>
-              <td>@fund.MontanteInvestido</td>
-              <td>@fund.TaxaJuro</td>
-              <td>@fund.idAtivoFinanceiro</td>
-          </tr>
-      }
+    </thead>
+    <tbody>
+    @foreach (var fund in @Model)
+    {
+        <tr>
+            <td>@fund.Nome</td>
+            <td>@fund.MontanteInvestido</td>
+            <td>@fund.TaxaJuro</td>
+            <td>@fund.idAtivoFinanceiro</td>
+
+            <td>
+                <a asp-action="EditarFundos" asp-route-id="@fund.idFundos">Editar</a> |
+                <a asp-action="EliminarFundos" asp-route-id="@fund.idFundos">Eliminar</a>
+            </td>
+        </tr>
+
+    }
+    </tbody>
 </table>
  

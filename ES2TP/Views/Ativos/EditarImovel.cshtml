@@ -1,0 +1,65 @@
+﻿@model ES2TP.Models.ImovelMostrarModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var errors = ViewData["Errors"] as List<string> ?? new List<string>();
+}
+
+<h1>EditarImovel</h1>
+
+<h4>Imoveis Arrendados</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditarImovel" method="Post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idImovel" />
+            <div class="form-group">
+                <label asp-for="Designacao" class="control-label"></label>
+                <input asp-for="Designacao" class="form-control" />
+                <span asp-validation-for="Designacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Localizacao" class="control-label"></label>
+                <input asp-for="Localizacao" class="form-control" />
+                <span asp-validation-for="Localizacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorImovel" class="control-label"></label>
+                <input asp-for="ValorImovel" class="form-control" />
+                <span asp-validation-for="ValorImovel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMensalCond" class="control-label"></label>
+                <input asp-for="ValorMensalCond" class="form-control" />
+                <span asp-validation-for="ValorMensalCond" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorRenda" class="control-label"></label>
+                <input asp-for="ValorRenda" class="form-control" />
+                <span asp-validation-for="ValorRenda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorAnual" class="control-label"></label>
+                <input asp-for="ValorAnual" class="form-control" />
+                <span asp-validation-for="ValorAnual" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+            <div style="color: red;">
+                @foreach (var error in errors)
+                {
+                    <p>@error</p>
+                }
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="RecebeDadosImovel">Back to List</a>
+</div>

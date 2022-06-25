@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "MenuAdmin";
+    ViewData["Title"] = "MenuUserManager";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,20 +11,7 @@
 </head>
 <body>
 <div>
-    <p> </p>
-    <b></b>
-    <form asp-action="CriarAdmin">
-        <div class="form-group">
-            <input type="submit" value="Criar Admin" class="btn btn-primary" />
-        </div>
-    </form>
-    <p> </p>
-        <b></b>
-        <form asp-action="AlterarPermissoes">
-            <div class="form-group">
-                <input type="submit" value="Alterar Permissoes" class="btn btn-primary" />
-            </div>
-        </form>
+    
     <p> </p>
     <b></b>
     <form asp-action="CriarUtilizador">
@@ -33,13 +20,13 @@
         </div>
     </form>
     
-       <p> </p>
-        <b></b>
-        <form asp-action="ListarAdmins">
-            <div class="form-group">
-                <input type="submit" value="Listar Admins" class="btn btn-primary" />
-            </div>
-        </form>
+    <p> </p>
+    <b></b>
+    <form asp-action="ListarUsers">
+        <div class="form-group">
+            <input type="submit" value="Listar Utilizadores" class="btn btn-primary" />
+        </div>
+    </form>
 
     <p> </p>
     <b></b>

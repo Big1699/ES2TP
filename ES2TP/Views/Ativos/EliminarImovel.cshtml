@@ -1,0 +1,40 @@
+﻿@model ES2TP.Entities.Imovelarrendado
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Apagar</h1>
+
+<h3>Tem a certeza que quer eliminar?</h3>
+<div>
+    <h4>Imoveis</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Designacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Localizacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Valoranual)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Valorimovel)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Valorrenda)
+        </dd>
+         <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Valormensalcondominio)
+                </dd>
+    </dl>
+    
+    <form asp-action="EliminarImovel">
+        <input type="hidden" asp-for="Idimovel" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="RecebeDadosImovel">Voltar</a>
+    </form>
+</div>

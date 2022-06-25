@@ -18,8 +18,11 @@ namespace ES2TP.Models
             this.ValorRenda = imovelarrendado.Valorrenda;
             this.ValorAnual = imovelarrendado.Valoranual;
             this.idAtivoFinanceiro = imovelarrendado.IdAtivoFinanceiro;
-      
+            this.idImovel = imovelarrendado.Idimovel;
+
         }
+        
+        public int? idImovel { get; set; }
         public int? idAtivoFinanceiro { get; set; }
 
         public double? ValorAnual { get; set; }
